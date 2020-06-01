@@ -166,7 +166,7 @@ def utcparse(string):
         return datetime.datetime.strptime(string, '%Y-%m-%dT%H:%M:%SZ')
     except ValueError:
         # This catches RQ < 0.4 datetime format
-        return datetime.datetime.strptime(string, '%Y-%m-%dT%H:%M:%S.%f+00:00')
+        return datetime.datetime.strptime(string, '%Y-%m-%dT%H:%M:%S.%fZ')
 
 
 def first(iterable, default=None, key=None):
